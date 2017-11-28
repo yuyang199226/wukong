@@ -13,8 +13,6 @@ class LoginView(APIView):
     def post(self,request,*args,**kwargs):
         username = request.data.get('username')
         password = request.data.get('password')
-
-        print(username,password)
         account_obj = models.Account.objects.filter(username=username,password=password).first()
         if account_obj:
             # 用户名密码正确
@@ -22,37 +20,54 @@ class LoginView(APIView):
             models.Token.objects.update_or_create(user=account_obj,defaults={
                 'token_value':tk
             })
-            response = HttpResponse('ok',status=200)
+            data = {
+                'status': 1000,
+                'data':{
+                    'username': account_obj.username,
+                    'token': tk,
+                    'userid': account_obj.pk
+                }
+            }
+            response = HttpResponse(json.dumps(data),status=200)
             response.set_cookie('token_value',tk)
-
-
         else:
             data = {
                 'status':1001,
                 'error':'用户名或者密码错误'
             }
             response = HttpResponse(json.dumps(data))
-
-        response['Access-Control-Allow-Origin']='http://127.0.0.1:8090'
-        response['Access-Control-Allow-Credentials'] = "true"
         return response
 
     def options(self, request, *args, **kwargs):
         response = HttpResponse('ok')
-        response['Access-Control-Allow-Methods'] = "POST"  # 允许跨域访问的 请求方式
-        response['Access-Control-Allow-Origin']="http://127.0.0.1:8090"
-        response['Access-Control-Allow-Headers'] = "X-Custom-Header,Content-Type"  # 允许请求头 值为 请求头的key
-        response['Access-Control-Allow-Credentials'] = "true"  #
         return response
 
+#
+# class MtoMField(serializers.CharField):
+#     def get_attribute(self, instance):
+#        return instance.objects.values('name','title')
+#     def to_representation(self,value):
+#
+#         return list(value)
 
+class MyField(serializers.CharField):
+    def get_attribute(self, instance):
+        #instance 是数据库对应的每行数据，即model 实例对象
+        data_list = instance.recommend_courses.all()
+        return data_list
+
+    def to_representation(self, value):
+        ret = []
+        for row in value:
+            ret.append({'id': row.id, 'name': row.name})
+        return ret
 
 class CourseSerializer(serializers.Serializer):
     '''课程'''
+    level_name = serializers.CharField(source='get_level_display')
     id = serializers.IntegerField()
     name = serializers.CharField()
     brief = serializers.CharField()
-    level = serializers.CharField()
 
 
 class CourseDetailSerializer(serializers.Serializer):
@@ -65,8 +80,13 @@ class CourseDetailSerializer(serializers.Serializer):
     career_improvement = serializers.CharField()
     prerequisite = serializers.CharField()
     # recommend_courses = serializers.HyperlinkedIdentityField(view_name='coursedetail_json')
-    # recommend_courses = serializers.CharField()
-    # teachers = serializers.CharField(source='teachers.all')
+    recommend_courses = MyField()
+    teachers = serializers.ListField(child=serializers.CharField(),source='teachers.all')
+
+    # teacher_ls = MtoMField()
+
+
+        # super(CourseDetailSerializer,self).to_representation(instance)
 
 class CoursesView(APIView):
     authentication_classes = [CustomAuthentication]
@@ -76,12 +96,11 @@ class CoursesView(APIView):
         if pk:
             course_obj = models.CourseDetail.objects.get(course=pk)
             ser = CourseDetailSerializer(instance=course_obj, many=False)
+            print(ser.data)
         else:
             course_ls = models.Course.objects.all()
             ser = CourseSerializer(instance=course_ls,many=True)
-        # print(ser.data)
+        print(ser.data)
         #拿到所有课程
         response = HttpResponse(json.dumps(ser.data))
-        response['Access-Control-Allow-Origin'] = "http://127.0.0.1:8090"
-        response['Access-Control-Allow-Credentials'] = "true"
         return response
