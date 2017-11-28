@@ -1,16 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8779f1e9-cbc9-4d99-b0de-435acf672b1f" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources/2f45a3af-a2a9-4b86-833a-3ca4bbd927e0/_metadata_/metadata" afterPath="$PROJECT_DIR$/.idea/dataSources/2f45a3af-a2a9-4b86-833a-3ca4bbd927e0/_metadata_/metadata" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources/2f45a3af-a2a9-4b86-833a-3ca4bbd927e0/_metadata_/metadata.values.at" afterPath="$PROJECT_DIR$/.idea/dataSources/2f45a3af-a2a9-4b86-833a-3ca4bbd927e0/_metadata_/metadata.values.at" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db.sqlite3" afterPath="$PROJECT_DIR$/db.sqlite3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources/2f45a3af-a2a9-4b86-833a-3ca4bbd927e0.xml" afterPath="$PROJECT_DIR$/.idea/dataSources/2f45a3af-a2a9-4b86-833a-3ca4bbd927e0.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/monkey/models.py" afterPath="$PROJECT_DIR$/monkey/models.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/monkey/views.py" afterPath="$PROJECT_DIR$/monkey/views.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wukong/settings.py" afterPath="$PROJECT_DIR$/wukong/settings.py" />
-    </list>
+    <list default="true" id="8779f1e9-cbc9-4d99-b0de-435acf672b1f" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -29,51 +20,18 @@
     <option name="SHOW_TABLE_DETAILS" value="true" />
     <option name="SHOW_EMPTY_GROUPS" value="false" />
     <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
-    <PATH>
-      <PATH_ELEMENT>
-        <option name="myItemId" />
-        <option name="myItemType" value="com.intellij.database.view.DatabaseStructure$Root" />
-      </PATH_ELEMENT>
-      <PATH_ELEMENT>
-        <option name="myItemId" value="db" />
-        <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
-      </PATH_ELEMENT>
-    </PATH>
-    <PATH>
-      <PATH_ELEMENT>
-        <option name="myItemId" />
-        <option name="myItemType" value="com.intellij.database.view.DatabaseStructure$Root" />
-      </PATH_ELEMENT>
-      <PATH_ELEMENT>
-        <option name="myItemId" value="db" />
-        <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
-      </PATH_ELEMENT>
-      <PATH_ELEMENT>
-        <option name="myItemId" value="main" />
-        <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
-      </PATH_ELEMENT>
-    </PATH>
+    <expand />
+    <select />
   </component>
   <component name="DjangoConsoleOptions" custom-start-script="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)">
     <option name="myCustomStartScript" value="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="authentication.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../../yuyang/virtual_env/env1/Lib/site-packages/rest_framework/authentication.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1008">
-              <caret line="53" column="12" lean-forward="false" selection-start-line="53" selection-start-column="12" selection-end-line="53" selection-end-column="12" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/monkey/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="92">
+            <state relative-caret-position="1650">
               <caret line="84" column="0" lean-forward="false" selection-start-line="84" selection-start-column="0" selection-end-line="84" selection-end-column="0" />
               <folding>
                 <element signature="e#0#11#0" expanded="true" />
@@ -86,7 +44,7 @@
         <entry file="file://$PROJECT_DIR$/wukong/settings.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="384">
-              <caret line="37" column="30" lean-forward="true" selection-start-line="37" selection-start-column="30" selection-end-line="37" selection-end-column="30" />
+              <caret line="37" column="30" lean-forward="false" selection-start-line="37" selection-start-column="30" selection-end-line="37" selection-end-column="30" />
               <folding />
             </state>
           </provider>
@@ -95,7 +53,7 @@
       <file leaf-file-name="models.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/monkey/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3216">
+            <state relative-caret-position="2948">
               <caret line="823" column="0" lean-forward="false" selection-start-line="823" selection-start-column="0" selection-end-line="823" selection-end-column="0" />
               <folding>
                 <element signature="e#0#28#0" expanded="true" />
@@ -148,77 +106,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="serializers.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../../yuyang/virtual_env/env1/Lib/site-packages/rest_framework/serializers.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1464">
-              <caret line="118" column="0" lean-forward="false" selection-start-line="118" selection-start-column="0" selection-end-line="118" selection-end-column="0" />
-              <folding>
-                <element signature="e#11329#12625#0" expanded="false" />
-                <element signature="e#12662#13476#0" expanded="false" />
-                <element signature="e#20915#28410#0" expanded="false" />
-                <element signature="e#28585#30940#0" expanded="false" />
-                <element signature="e#59982#60323#0" expanded="false" />
-                <element signature="e#60381#61655#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="fields.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../../yuyang/virtual_env/env1/Lib/site-packages/rest_framework/fields.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="6144">
-              <caret line="295" column="6" lean-forward="false" selection-start-line="295" selection-start-column="6" selection-end-line="295" selection-end-column="6" />
-              <folding>
-                <element signature="e#22406#23591#0" expanded="false" />
-                <element signature="e#23629#24989#0" expanded="false" />
-                <element signature="e#25036#27342#0" expanded="false" />
-                <element signature="e#27378#27666#0" expanded="false" />
-                <element signature="e#27702#28023#0" expanded="false" />
-                <element signature="e#28058#28783#0" expanded="false" />
-                <element signature="e#28817#29091#0" expanded="false" />
-                <element signature="e#29122#30321#0" expanded="false" />
-                <element signature="e#30361#31313#0" expanded="false" />
-                <element signature="e#31363#33000#0" expanded="false" />
-                <element signature="e#33032#34535#0" expanded="false" />
-                <element signature="e#34569#40221#0" expanded="false" />
-                <element signature="e#43665#46048#0" expanded="false" />
-                <element signature="e#45228#46048#0" expanded="false" />
-                <element signature="e#46079#48325#0" expanded="false" />
-                <element signature="e#48360#48863#0" expanded="false" />
-                <element signature="e#52256#52880#0" expanded="false" />
-                <element signature="e#52925#54765#0" expanded="false" />
-                <element signature="e#54801#55613#0" expanded="false" />
-                <element signature="e#56068#56375#0" expanded="false" />
-                <element signature="e#57543#58104#0" expanded="false" />
-                <element signature="e#58153#58661#0" expanded="false" />
-                <element signature="e#58960#60708#0" expanded="false" />
-                <element signature="e#60739#62337#0" expanded="false" />
-                <element signature="e#62401#62968#0" expanded="false" />
-                <element signature="e#63001#63763#0" expanded="false" />
-                <element signature="e#63806#65516#0" expanded="false" />
-                <element signature="e#65548#67092#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="tokenmiddleware.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/monkey/middleware/tokenmiddleware.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="72">
+            <state relative-caret-position="66">
               <caret line="3" column="48" lean-forward="false" selection-start-line="3" selection-start-column="48" selection-end-line="3" selection-end-column="48" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../../yuyang/virtual_env/env1/Lib/site-packages/rest_framework/views.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2328">
-              <caret line="117" column="8" lean-forward="false" selection-start-line="117" selection-start-column="8" selection-end-line="117" selection-end-column="8" />
               <folding />
             </state>
           </provider>
@@ -227,7 +119,7 @@
       <file leaf-file-name="urls.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/wukong/urls.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="552">
+            <state relative-caret-position="506">
               <caret line="25" column="102" lean-forward="false" selection-start-line="25" selection-start-column="85" selection-end-line="25" selection-end-column="102" />
               <folding />
             </state>
@@ -247,9 +139,9 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/wukong/urls.py" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/monkey/utils/authentication.py" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/monkey/views.py" root0="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/wukong/urls.py" root0="SKIP_INSPECTION" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -259,7 +151,7 @@
         <option value="$PROJECT_DIR$/wukong/urls.py" />
         <option value="$PROJECT_DIR$/wukong/settings.py" />
         <option value="$PROJECT_DIR$/monkey/middleware/tokenmiddleware.py" />
-        <option value="$PROJECT_DIR$/../../yuyang/virtual_env/env1/Lib/site-packages/rest_framework/fields.py" />
+        <option value="E:/../yuyang/virtual_env/env1/Lib/site-packages/rest_framework/fields.py" />
         <option value="$PROJECT_DIR$/monkey/models.py" />
         <option value="$PROJECT_DIR$/monkey/views.py" />
       </list>
@@ -272,8 +164,8 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-8" />
-    <option name="y" value="-8" />
+    <option name="x" value="255" />
+    <option name="y" value="34" />
     <option name="width" value="1382" />
     <option name="height" value="754" />
   </component>
@@ -295,84 +187,17 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="Scratches" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="wukong" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="wukong" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="wukong" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="wukong" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="wukong" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="wukong" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="wukong" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="monkey" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="wukong" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="wukong" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="monkey" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="utils" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="wukong" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="wukong" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="monkey" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="middleware" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
+          <expand>
+            <path>
+              <item name="GitProject" type="b2602c69:ProjectViewProjectNode" />
+              <item name="GitProject" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
         </subPane>
       </pane>
     </panes>
@@ -380,6 +205,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -394,24 +220,13 @@
     </option>
   </component>
   <component name="RunManager" selected="Django server.wukong">
-    <configuration default="false" name="authentication" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/monkey/utils" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="wukong" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/monkey/utils/authentication.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <method />
+    <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
+      <node-interpreter>project</node-interpreter>
+      <node-options />
+      <gulpfile />
+      <tasks />
+      <arguments />
+      <envs />
     </configuration>
     <configuration default="true" type="DjangoTestsConfigurationType" factoryName="Django tests">
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -477,6 +292,25 @@
       <option name="ADDITIONAL_ARGS" value="" />
       <method />
     </configuration>
+    <configuration default="true" type="PythonConfigurationType" factoryName="Python">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="wukong" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <method />
+    </configuration>
     <configuration default="true" type="Python.DjangoServer" factoryName="Django server">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -500,25 +334,6 @@
       <option name="customRunCommand" value="" />
       <method />
     </configuration>
-    <configuration default="true" type="PythonConfigurationType" factoryName="Python">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="wukong" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <method />
-    </configuration>
     <configuration default="true" type="Tox" factoryName="Tox">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -530,15 +345,6 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
       <module name="wukong" />
-      <method />
-    </configuration>
-    <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
-      <node-interpreter>project</node-interpreter>
-      <node-options />
-      <gulpfile />
-      <tasks />
-      <arguments />
-      <envs />
       <method />
     </configuration>
     <configuration default="true" type="js.build_tools.npm" factoryName="npm">
@@ -584,7 +390,25 @@
       <option name="_new_targetType" value="&quot;PATH&quot;" />
       <method />
     </configuration>
-    <configuration default="false" name="wukong" type="Python.DjangoServer" factoryName="Django server">
+    <configuration name="authentication" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/monkey/utils" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="wukong" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/monkey/utils/authentication.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+    </configuration>
+    <configuration name="wukong" type="Python.DjangoServer" factoryName="Django server">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
@@ -606,7 +430,6 @@
       <option name="runNoReload" value="false" />
       <option name="useCustomRunCommand" value="false" />
       <option name="customRunCommand" value="" />
-      <method />
     </configuration>
     <list size="2">
       <item index="0" class="java.lang.String" itemvalue="Django server.wukong" />
@@ -632,16 +455,15 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
-    <editor active="true" />
+    <frame x="255" y="34" width="1382" height="754" extended-state="0" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1429652" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14513677" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.27697262" sideWeight="0.5030257" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16490166" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16489361" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.5120773" sideWeight="0.4969743" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.5120773" sideWeight="0.4969743" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.28180355" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -657,7 +479,7 @@
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="processedProjectFiles" value="true" />
+    <option name="version" value="1" />
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
@@ -669,14 +491,95 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/../../yuyang/virtual_env/env1/Lib/site-packages/rest_framework/authentication.py">
+    <entry file="file://$PROJECT_DIR$/monkey/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="1650">
+          <caret line="84" column="0" lean-forward="false" selection-start-line="84" selection-start-column="0" selection-end-line="84" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#11#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/monkey/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2948">
+          <caret line="823" column="0" lean-forward="false" selection-start-line="823" selection-start-column="0" selection-end-line="823" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#28#0" expanded="true" />
+            <element signature="e#354#726#0" expanded="false" />
+            <element signature="e#759#865#0" expanded="false" />
+            <element signature="e#912#1448#0" expanded="false" />
+            <element signature="e#1490#1916#0" expanded="false" />
+            <element signature="e#1958#2527#0" expanded="false" />
+            <element signature="e#2570#4601#0" expanded="false" />
+            <element signature="e#4647#5358#0" expanded="false" />
+            <element signature="e#5395#6653#0" expanded="false" />
+            <element signature="e#6693#7658#0" expanded="false" />
+            <element signature="e#7698#8108#0" expanded="false" />
+            <element signature="e#8144#8607#0" expanded="false" />
+            <element signature="e#8649#9173#0" expanded="false" />
+            <element signature="e#9211#9694#0" expanded="false" />
+            <element signature="e#9727#9978#0" expanded="false" />
+            <element signature="e#10024#10854#0" expanded="false" />
+            <element signature="e#10894#11906#0" expanded="false" />
+            <element signature="e#11948#12902#0" expanded="false" />
+            <element signature="e#12975#13829#0" expanded="false" />
+            <element signature="e#13876#15039#0" expanded="false" />
+            <element signature="e#15076#16071#0" expanded="false" />
+            <element signature="e#16113#16311#0" expanded="false" />
+            <element signature="e#16346#18064#0" expanded="false" />
+            <element signature="e#18103#18487#0" expanded="false" />
+            <element signature="e#18523#19212#0" expanded="false" />
+            <element signature="e#19250#20118#0" expanded="false" />
+            <element signature="e#20158#21601#0" expanded="false" />
+            <element signature="e#21644#22036#0" expanded="false" />
+            <element signature="e#22079#22834#0" expanded="false" />
+            <element signature="e#22885#24478#0" expanded="false" />
+            <element signature="e#24527#25624#0" expanded="false" />
+            <element signature="e#25659#27764#0" expanded="false" />
+            <element signature="e#27805#28637#0" expanded="false" />
+            <element signature="e#28671#29718#0" expanded="false" />
+            <element signature="e#29758#30594#0" expanded="false" />
+            <element signature="e#30634#31578#0" expanded="false" />
+            <element signature="e#31620#31886#0" expanded="false" />
+            <element signature="e#31931#32269#0" expanded="false" />
+            <element signature="e#32303#34021#0" expanded="false" />
+            <element signature="e#37626#37950#0" expanded="false" />
+            <element signature="e#37983#38349#0" expanded="false" />
+            <element signature="e#38386#38702#0" expanded="false" />
+            <element signature="e#38741#39145#0" expanded="false" />
+            <element signature="e#39186#39485#0" expanded="false" />
+            <element signature="e#39522#39967#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/monkey/middleware/tokenmiddleware.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="66">
+          <caret line="3" column="48" lean-forward="false" selection-start-line="3" selection-start-column="48" selection-end-line="3" selection-end-column="48" />
           <folding />
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/wukong/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="506">
+          <caret line="25" column="102" lean-forward="false" selection-start-line="25" selection-start-column="85" selection-end-line="25" selection-end-column="102" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wukong/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="814">
+          <caret line="37" column="30" lean-forward="true" selection-start-line="37" selection-start-column="30" selection-end-line="37" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://E:/../yuyang/virtual_env/env1/Lib/site-packages/rest_framework/authentication.py" />
     <entry file="file://$PROJECT_DIR$/monkey/views.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2016">
@@ -741,58 +644,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../../yuyang/virtual_env/env1/Lib/site-packages/rest_framework/serializers.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2832">
-          <caret line="118" column="0" lean-forward="false" selection-start-line="118" selection-start-column="0" selection-end-line="118" selection-end-column="0" />
-          <folding>
-            <element signature="e#11329#12625#0" expanded="false" />
-            <element signature="e#12662#13476#0" expanded="false" />
-            <element signature="e#20915#28410#0" expanded="false" />
-            <element signature="e#28585#30940#0" expanded="false" />
-            <element signature="e#59982#60323#0" expanded="false" />
-            <element signature="e#60381#61655#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../yuyang/virtual_env/env1/Lib/site-packages/rest_framework/fields.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="7080">
-          <caret line="295" column="6" lean-forward="false" selection-start-line="295" selection-start-column="6" selection-end-line="295" selection-end-column="6" />
-          <folding>
-            <element signature="e#22406#23591#0" expanded="false" />
-            <element signature="e#23629#24989#0" expanded="false" />
-            <element signature="e#25036#27342#0" expanded="false" />
-            <element signature="e#27378#27666#0" expanded="false" />
-            <element signature="e#27702#28023#0" expanded="false" />
-            <element signature="e#28058#28783#0" expanded="false" />
-            <element signature="e#28817#29091#0" expanded="false" />
-            <element signature="e#29122#30321#0" expanded="false" />
-            <element signature="e#30361#31313#0" expanded="false" />
-            <element signature="e#31363#33000#0" expanded="false" />
-            <element signature="e#33032#34535#0" expanded="false" />
-            <element signature="e#34569#40221#0" expanded="false" />
-            <element signature="e#43665#46048#0" expanded="false" />
-            <element signature="e#45228#46048#0" expanded="false" />
-            <element signature="e#46079#48325#0" expanded="false" />
-            <element signature="e#48360#48863#0" expanded="false" />
-            <element signature="e#52256#52880#0" expanded="false" />
-            <element signature="e#52925#54765#0" expanded="false" />
-            <element signature="e#54801#55613#0" expanded="false" />
-            <element signature="e#56068#56375#0" expanded="false" />
-            <element signature="e#57543#58104#0" expanded="false" />
-            <element signature="e#58153#58661#0" expanded="false" />
-            <element signature="e#58960#60708#0" expanded="false" />
-            <element signature="e#60739#62337#0" expanded="false" />
-            <element signature="e#62401#62968#0" expanded="false" />
-            <element signature="e#63001#63763#0" expanded="false" />
-            <element signature="e#63806#65516#0" expanded="false" />
-            <element signature="e#65548#67092#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://E:/../yuyang/virtual_env/env1/Lib/site-packages/rest_framework/serializers.py" />
+    <entry file="file://E:/../yuyang/virtual_env/env1/Lib/site-packages/rest_framework/fields.py" />
     <entry file="file://$PROJECT_DIR$/monkey/middleware/tokenmiddleware.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="72">
@@ -801,22 +654,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../../yuyang/virtual_env/env1/Lib/site-packages/rest_framework/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2328">
-          <caret line="117" column="8" lean-forward="false" selection-start-line="117" selection-start-column="8" selection-end-line="117" selection-end-column="8" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../yuyang/virtual_env/env1/Lib/site-packages/rest_framework/authentication.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="768">
-          <caret line="43" column="20" lean-forward="false" selection-start-line="43" selection-start-column="20" selection-end-line="43" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://E:/../yuyang/virtual_env/env1/Lib/site-packages/rest_framework/views.py" />
+    <entry file="file://E:/../yuyang/virtual_env/env1/Lib/site-packages/rest_framework/authentication.py" />
     <entry file="file://$PROJECT_DIR$/monkey/models.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2064">
@@ -871,14 +710,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../../yuyang/virtual_env/env1/Lib/site-packages/rest_framework/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2328">
-          <caret line="117" column="8" lean-forward="false" selection-start-line="117" selection-start-column="8" selection-end-line="117" selection-end-column="8" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://E:/../yuyang/virtual_env/env1/Lib/site-packages/rest_framework/views.py" />
     <entry file="file://$PROJECT_DIR$/wukong/urls.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="552">
@@ -905,46 +737,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../../yuyang/virtual_env/env1/Lib/site-packages/rest_framework/request.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3216">
-          <caret line="134" column="46" lean-forward="false" selection-start-line="134" selection-start-column="46" selection-end-line="134" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="dbDummy://dbtable:/4602a291/2f45a3af-a2a9-4b86-833a-3ca4bbd927e0/main.monkey_account">
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../yuyang/virtual_env/env1/Lib/site-packages/rest_framework/response.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="15" column="32" lean-forward="false" selection-start-line="15" selection-start-column="32" selection-end-line="15" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../yuyang/virtual_env/env1/Lib/site-packages/django/template/response.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="10" column="38" lean-forward="false" selection-start-line="10" selection-start-column="38" selection-end-line="10" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../yuyang/virtual_env/env1/Lib/site-packages/django/http/response.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="30" column="6" lean-forward="false" selection-start-line="30" selection-start-column="6" selection-end-line="30" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://E:/../yuyang/virtual_env/env1/Lib/site-packages/rest_framework/request.py" />
+    <entry file="dbDummy://dbtable:/4602a291/2f45a3af-a2a9-4b86-833a-3ca4bbd927e0/main.monkey_account" />
+    <entry file="file://E:/../yuyang/virtual_env/env1/Lib/site-packages/rest_framework/response.py" />
+    <entry file="file://E:/../yuyang/virtual_env/env1/Lib/site-packages/django/template/response.py" />
+    <entry file="file://E:/../yuyang/virtual_env/env1/Lib/site-packages/django/http/response.py" />
     <entry file="file://$PROJECT_DIR$/wukong/urls.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="456">
@@ -963,56 +760,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../../yuyang/virtual_env/env1/Lib/site-packages/django/template/response.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="10" column="38" lean-forward="false" selection-start-line="10" selection-start-column="38" selection-end-line="10" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../yuyang/virtual_env/env1/Lib/site-packages/django/core/serializers/json.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4">
-          <caret line="90" column="6" lean-forward="false" selection-start-line="90" selection-start-column="6" selection-end-line="90" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="dbDummy://dbtable:/4602a291/2f45a3af-a2a9-4b86-833a-3ca4bbd927e0/main.monkey_account">
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="dbDummy://dbtable:/4602a291/2f45a3af-a2a9-4b86-833a-3ca4bbd927e0/main.auth_user">
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="dbDummy://dbtable:/4602a291/2f45a3af-a2a9-4b86-833a-3ca4bbd927e0/main.monkey_course">
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://E:/../yuyang/virtual_env/env1/Lib/site-packages/django/template/response.py" />
+    <entry file="file://E:/../yuyang/virtual_env/env1/Lib/site-packages/django/core/serializers/json.py" />
+    <entry file="dbDummy://dbtable:/4602a291/2f45a3af-a2a9-4b86-833a-3ca4bbd927e0/main.monkey_account" />
+    <entry file="dbDummy://dbtable:/4602a291/2f45a3af-a2a9-4b86-833a-3ca4bbd927e0/main.auth_user" />
+    <entry file="dbDummy://dbtable:/4602a291/2f45a3af-a2a9-4b86-833a-3ca4bbd927e0/main.monkey_course" />
     <entry file="file://$PROJECT_DIR$/monkey/admin.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="168">
@@ -1020,114 +772,23 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../../yuyang/virtual_env/env1/Lib/site-packages/django/http/response.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="353">
-          <caret line="519" column="43" lean-forward="false" selection-start-line="519" selection-start-column="43" selection-end-line="519" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="dbDummy://dbtable:/4602a291/2f45a3af-a2a9-4b86-833a-3ca4bbd927e0/main.monkey_token">
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../yuyang/virtual_env/env1/Lib/site-packages/rest_framework/response.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="191">
-          <caret line="15" column="32" lean-forward="false" selection-start-line="15" selection-start-column="32" selection-end-line="15" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../yuyang/virtual_env/env1/Lib/site-packages/rest_framework/request.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="275">
-          <caret line="176" column="20" lean-forward="false" selection-start-line="176" selection-start-column="8" selection-end-line="176" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://D:/Python36/Lib/inspect.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-792">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../yuyang/virtual_env/env1/Lib/site-packages/django/utils/six.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="167">
-          <caret line="51" column="4" lean-forward="false" selection-start-line="51" selection-start-column="4" selection-end-line="51" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../yuyang/virtual_env/env1/Lib/site-packages/rest_framework/authentication.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1008">
-          <caret line="53" column="12" lean-forward="false" selection-start-line="53" selection-start-column="12" selection-end-line="53" selection-end-column="12" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../yuyang/virtual_env/env1/Lib/site-packages/rest_framework/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2328">
-          <caret line="117" column="8" lean-forward="false" selection-start-line="117" selection-start-column="8" selection-end-line="117" selection-end-column="8" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://E:/../yuyang/virtual_env/env1/Lib/site-packages/django/http/response.py" />
+    <entry file="dbDummy://dbtable:/4602a291/2f45a3af-a2a9-4b86-833a-3ca4bbd927e0/main.monkey_token" />
+    <entry file="file://E:/../yuyang/virtual_env/env1/Lib/site-packages/rest_framework/response.py" />
+    <entry file="file://E:/../yuyang/virtual_env/env1/Lib/site-packages/rest_framework/request.py" />
+    <entry file="file://D:/Python36/Lib/inspect.py" />
+    <entry file="file://E:/../yuyang/virtual_env/env1/Lib/site-packages/django/utils/six.py" />
+    <entry file="file://E:/../yuyang/virtual_env/env1/Lib/site-packages/rest_framework/authentication.py" />
+    <entry file="file://E:/../yuyang/virtual_env/env1/Lib/site-packages/rest_framework/views.py" />
     <entry file="file://$PROJECT_DIR$/monkey/middleware/tokenmiddleware.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
+        <state relative-caret-position="66">
           <caret line="3" column="48" lean-forward="false" selection-start-line="3" selection-start-column="48" selection-end-line="3" selection-end-column="48" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../../yuyang/virtual_env/env1/Lib/site-packages/rest_framework/fields.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="6144">
-          <caret line="295" column="6" lean-forward="false" selection-start-line="295" selection-start-column="6" selection-end-line="295" selection-end-column="6" />
-          <folding>
-            <element signature="e#22406#23591#0" expanded="false" />
-            <element signature="e#23629#24989#0" expanded="false" />
-            <element signature="e#25036#27342#0" expanded="false" />
-            <element signature="e#27378#27666#0" expanded="false" />
-            <element signature="e#27702#28023#0" expanded="false" />
-            <element signature="e#28058#28783#0" expanded="false" />
-            <element signature="e#28817#29091#0" expanded="false" />
-            <element signature="e#29122#30321#0" expanded="false" />
-            <element signature="e#30361#31313#0" expanded="false" />
-            <element signature="e#31363#33000#0" expanded="false" />
-            <element signature="e#33032#34535#0" expanded="false" />
-            <element signature="e#34569#40221#0" expanded="false" />
-            <element signature="e#43665#46048#0" expanded="false" />
-            <element signature="e#45228#46048#0" expanded="false" />
-            <element signature="e#46079#48325#0" expanded="false" />
-            <element signature="e#48360#48863#0" expanded="false" />
-            <element signature="e#52256#52880#0" expanded="false" />
-            <element signature="e#52925#54765#0" expanded="false" />
-            <element signature="e#54801#55613#0" expanded="false" />
-            <element signature="e#56068#56375#0" expanded="false" />
-            <element signature="e#57543#58104#0" expanded="false" />
-            <element signature="e#58153#58661#0" expanded="false" />
-            <element signature="e#58960#60708#0" expanded="false" />
-            <element signature="e#60739#62337#0" expanded="false" />
-            <element signature="e#62401#62968#0" expanded="false" />
-            <element signature="e#63001#63763#0" expanded="false" />
-            <element signature="e#63806#65516#0" expanded="false" />
-            <element signature="e#65548#67092#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://E:/../yuyang/virtual_env/env1/Lib/site-packages/rest_framework/fields.py" />
     <entry file="file://$PROJECT_DIR$/monkey/utils/authentication.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="528">
@@ -1135,24 +796,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../../yuyang/virtual_env/env1/Lib/site-packages/rest_framework/serializers.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1464">
-          <caret line="118" column="0" lean-forward="false" selection-start-line="118" selection-start-column="0" selection-end-line="118" selection-end-column="0" />
-          <folding>
-            <element signature="e#11329#12625#0" expanded="false" />
-            <element signature="e#12662#13476#0" expanded="false" />
-            <element signature="e#20915#28410#0" expanded="false" />
-            <element signature="e#28585#30940#0" expanded="false" />
-            <element signature="e#59982#60323#0" expanded="false" />
-            <element signature="e#60381#61655#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://E:/../yuyang/virtual_env/env1/Lib/site-packages/rest_framework/serializers.py" />
     <entry file="file://$PROJECT_DIR$/monkey/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3216">
+        <state relative-caret-position="2948">
           <caret line="823" column="0" lean-forward="false" selection-start-line="823" selection-start-column="0" selection-end-line="823" selection-end-column="0" />
           <folding>
             <element signature="e#0#28#0" expanded="true" />
@@ -1206,7 +853,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/wukong/urls.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="552">
+        <state relative-caret-position="506">
           <caret line="25" column="102" lean-forward="false" selection-start-line="25" selection-start-column="85" selection-end-line="25" selection-end-column="102" />
           <folding />
         </state>
@@ -1214,7 +861,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/monkey/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="92">
+        <state relative-caret-position="1650">
           <caret line="84" column="0" lean-forward="false" selection-start-line="84" selection-start-column="0" selection-end-line="84" selection-end-column="0" />
           <folding>
             <element signature="e#0#11#0" expanded="true" />
@@ -1225,7 +872,7 @@
     <entry file="file://$PROJECT_DIR$/wukong/settings.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="384">
-          <caret line="37" column="30" lean-forward="true" selection-start-line="37" selection-start-column="30" selection-end-line="37" selection-end-column="30" />
+          <caret line="37" column="30" lean-forward="false" selection-start-line="37" selection-start-column="30" selection-end-line="37" selection-end-column="30" />
           <folding />
         </state>
       </provider>
