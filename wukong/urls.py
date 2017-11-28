@@ -20,8 +20,12 @@ from monkey import views
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^login/', views.LoginView.as_view()),
+
     url(r'^courses$', views.CoursesView.as_view()),
     url(r'^courses\.(?P<format>\w+)$', views.CoursesView.as_view()),
+
     url(r'^courses/(?P<pk>\d+)$', views.CoursesView.as_view()),
     url(r'^courses/(?P<pk>\d+)\.(?P<format>\w+)$', views.CoursesView.as_view(),name='coursedetail_json'),
+
+
 ]
