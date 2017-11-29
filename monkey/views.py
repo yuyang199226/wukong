@@ -5,7 +5,6 @@ from django.http import JsonResponse
 from rest_framework.views import APIView
 from rest_framework.response import Response
 from rest_framework import serializers
-from monkey.utils.authentication import token, CustomAuthentication
 from django.contrib.contenttypes.models import ContentType
 
 
@@ -102,7 +101,7 @@ class CourseDetailSerializer(serializers.ModelSerializer):
         ret = []
         price_policy = obj.course.price_policy.all()
         for item in price_policy:
-            ret.append({'valid_period': item.get_valid_period_display(), 'price': item.price})
+            ret.append({'price_policy_id':item.id , 'valid_period': item.get_valid_period_display(), 'price': item.price})
         return ret
 
     def get_chapters(self, obj):
@@ -147,8 +146,6 @@ class CourseDetailSerializer(serializers.ModelSerializer):
 
 
 class CoursesView(APIView):
-    authentication_classes = [CustomAuthentication]
-
     def get(self, request, *args, **kwargs):
         response = {'code': 1000, 'msg': None, 'data': None}
 
@@ -159,7 +156,8 @@ class CoursesView(APIView):
                 ser = CourseDetailSerializer(instance=course_obj, many=False)
                 print(ser.data)
             else:
-                course_ls = models.Course.objects.all()
+                # 排除学位课程
+                course_ls = models.Course.objects.exclude(course_type=2)
                 ser = CourseSerializer(instance=course_ls, many=True)
             response['data'] = ser.data
         except Exception as e:
@@ -167,3 +165,84 @@ class CoursesView(APIView):
             response['msg'] = 'something wrong...'
 
         return Response(response)
+
+
+class PaymentHandleView(APIView):
+    def post(self, request, *args, **kwargs):
+        """
+        收到前端传来的数据 {{'course_id': 1, plicy_id: 1}, {}}
+        检查课程是否合法（1.存在 2.课程状态），价格策略是否合法（1.存在 2.和该课程关联）
+        保存到redis: 用户id: {policy_id: {xxx}}
+        """
+        from Service.redis_service import SingleRedis
+        redis = SingleRedis()
+
+        response = {'code': 1000,  # code: 1000 成功；
+               'msg': None,
+               'data': None}
+
+        data = json.loads(request.body.decode('utf-8'))
+
+        # 验证数据
+        for item in data:
+            course_id = item.get('course_id')
+            course_obj = models.Course.filter(id=course_id).first()
+            if not course_obj:
+                response['code'] = 1001
+                response['msg'] = '选择的课程不存在！'
+                return Response(response)
+
+            if course_obj.status != 0:
+                response['code'] = 1002
+                response['msg'] = '选择的课程暂时无法购买！'
+                return Response(response)
+
+            price_policy_id = item.get('price_policy_id')
+            price_policy_obj = models.PricePolicy.filter(id=price_policy_id).first()
+            if not price_policy_obj:
+                response['code'] = 1003
+                response['msg'] = '选择的价格策略不存在！'
+                return Response(response)
+
+            print('当前优惠券绑定商品是：',price_policy_obj.content_object)
+            if price_policy_obj.content_object != course_obj:
+                response['code'] = 1004
+                response['msg'] = '选择的价格策略和课程不匹配！'
+                return Response(response)
+
+            # 课程和价格策略验证没问题，创建数据准备存入redis
+            detail = {
+                'price': price_policy_obj.price,
+                'valid_period': price_policy_obj.get_valid_period_display(),
+                'course': {
+                    'id': course_obj.id,
+                    'name': course_obj.name,
+                    'course_img': course_obj.course_img
+                }
+            }
+
+            redis.conn.hset(request.user.id, price_policy_id, json.dumps(detail))
+
+        return Response(response)
+
+    def get(self, request, *args, **kwargs):
+        pass
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
