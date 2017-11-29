@@ -172,7 +172,7 @@ class PaymentHandleView(APIView):
         """
         收到前端传来的数据 {{'course_id': 1, plicy_id: 1}, {}}
         检查课程是否合法（1.存在 2.课程状态），价格策略是否合法（1.存在 2.和该课程关联）
-        保存到redis: 用户id: {policy_id: {xxx}}
+        保存结算数据到redis: 用户id: {policy_id: {xxx}}
         """
         from Service.redis_service import SingleRedis
         redis = SingleRedis()
@@ -182,11 +182,12 @@ class PaymentHandleView(APIView):
                'data': None}
 
         data = json.loads(request.body.decode('utf-8'))
+        print(data)
 
         # 验证数据
         for item in data:
             course_id = item.get('course_id')
-            course_obj = models.Course.filter(id=course_id).first()
+            course_obj = models.Course.objects.filter(id=course_id).first()
             if not course_obj:
                 response['code'] = 1001
                 response['msg'] = '选择的课程不存在！'
@@ -197,8 +198,8 @@ class PaymentHandleView(APIView):
                 response['msg'] = '选择的课程暂时无法购买！'
                 return Response(response)
 
-            price_policy_id = item.get('price_policy_id')
-            price_policy_obj = models.PricePolicy.filter(id=price_policy_id).first()
+            price_policy_id = int(item.get('price_policy_id'))
+            price_policy_obj = models.PricePolicy.objects.filter(id=price_policy_id).first()
             if not price_policy_obj:
                 response['code'] = 1003
                 response['msg'] = '选择的价格策略不存在！'
@@ -221,11 +222,23 @@ class PaymentHandleView(APIView):
                 }
             }
 
-            redis.conn.hset(request.user.id, price_policy_id, json.dumps(detail))
+            try:
+                redis.conn.hset(request.user.id, price_policy_id, json.dumps(detail))
+            except Exception as e:
+                response['code'] = 1005
+                response['msg'] = '无法获取用户信息，请先登录！'
 
         return Response(response)
 
     def get(self, request, *args, **kwargs):
+        """
+        从redis获取结算列表；
+        获取当前用户所有可用优惠券（排除过期的，已经使用的）
+        :param request: 
+        :param args: 
+        :param kwargs: 
+        :return: 
+        """
         pass
 
 
