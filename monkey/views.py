@@ -45,24 +45,24 @@ class LoginView(APIView):
 
 
 #
-# class MtoMField(serializers.CharField):
-#     def get_attribute(self, instance):
-#        return instance.objects.values('name','title')
-#     def to_representation(self,value):
-#
-#         return list(value)
+class MtoMField(serializers.CharField):
+    def get_attribute(self, instance):
+       return instance.objects.values('name','title')
+    def to_representation(self,value):
 
-# class MyField(serializers.CharField):
-#     def get_attribute(self, instance):
-#         #instance 是数据库对应的每行数据，即model 实例对象
-#         data_list = instance.recommend_courses.all()
-#         return data_list
-#
-#     def to_representation(self, value):
-#         ret = []
-#         for row in value:
-#             ret.append({'id': row.id, 'name': row.name})
-#         return ret
+        return list(value)
+
+class MyField(serializers.CharField):
+    def get_attribute(self, instance):
+        #instance 是数据库对应的每行数据，即model 实例对象
+        data_list = instance.recommend_courses.all()
+        return data_list
+
+    def to_representation(self, value):
+        ret = []
+        for row in value:
+            ret.append({'id': row.id, 'name': row.name})
+        return ret
 
 
 class CourseSerializer(serializers.Serializer):
