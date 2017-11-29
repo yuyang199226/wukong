@@ -27,8 +27,11 @@ urlpatterns = [
     url(r'^courses/(?P<pk>\d+)$', views.CoursesView.as_view()),
     url(r'^courses/(?P<pk>\d+)\.(?P<format>\w+)$', views.CoursesView.as_view(),name='coursedetail_json'),
 
+
     url(r'payment_handle/$', views.PaymentHandleView.as_view()),
     url(r'payment_handle\.(?P<format>\w+)$', views.PaymentHandleView.as_view()),
 
+
+    url(r'^shopping\.(?P<format>\w+)$', views.Shopping.as_view(),), #购物车
 
 ]
