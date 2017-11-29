@@ -7,7 +7,7 @@ from rest_framework.response import Response
 from rest_framework import serializers
 from monkey.utils.authentication import token, CustomAuthentication
 from django.contrib.contenttypes.models import ContentType
-
+from Service.redis_service import SingleRedis #Redis
 
 class LoginView(APIView):
     # self.dispatch
@@ -168,13 +168,6 @@ class CoursesView(APIView):
         return Response(response)
 
 
-
-
-""" Redis数据库 """
-import redis
-pool =redis.ConnectionPool(host='192.168.16.43', port=6379)
-r = redis.Redis(connection_pool=pool)
-
 """价格与有课程效期表序列化"""
 class ShopPriceJson(serializers.ModelSerializer):  # 模板
     valid_period = serializers.CharField(source='get_valid_period_display')
@@ -186,40 +179,53 @@ class ShopPriceJson(serializers.ModelSerializer):  # 模板
 class Shopping(APIView):
     # obj = models.Course.objects.get(pk=1).price_policy #根据可能,或许关联的可能(多)
     # obj = models.PricePolicy.objects.get(pk=2).content_type #根据 价格与有课程效期表 找关联课程
+    def __init__(self):
+        self.r = SingleRedis()  #单利模式
     def get(self,request,*args,**kwargs):
         """ 获取购物车信息 """
+        ######
+        nid = '1'  # 用户Id 测试
+        ######
 
-        nid = 1 #用户id
         info = {'code': 200, 'msg': '', 'content': {'course':{}}} #返回的数据
-
         if not nid:
             info = {'code': 401, 'msg': '尚未登陆', 'content': ''}  # 状态信息
             return Response(info)
+        course_list = self.r.conn.hkeys('price_user_%s'%nid)   #所有的课程对象
 
-        course_list = r.hkeys('price_user_%s'%nid)   #所有的课程对象
         try:
             for i in course_list:
                 i = str(i,encoding='utf-8')
                 course_obj = models.Course.objects.get(id=i)#课程对象
-                info['content']['course']['%s'%course_obj.pk] = {'name':course_obj.name,'default':i,'policy':ShopPriceJson(instance=course_obj.price_policy,many=True).data}
+                default = models.PricePolicy.objects.get(pk=str(self.r.conn.hget('price_user_%s' % nid, i), encoding='utf-8')).price  # 默认价格
+
+                info['content']['course']['%s'%course_obj.pk] = {'name':course_obj.name,'default':default,'policy':ShopPriceJson(instance=course_obj.price_policy,many=True).data}
         except:
             info = {'code': 400, 'msg': '获取数据错误', 'content': {'course': {}}}  # 返回的数据
         return Response(info)
 
     def post(self,request,*args,**kwargs):
         """ 增加购物车信息 """
-
         info = {'code':200,'msg':'','content':''}   #状态信息
-        nid = '1'   #用户id
-        pid = '1'   #价格与课程表id
+        price_policy_id = request.data.get('price_policy_id') #策略ID
+
+
+        ######
+        nid = '1'  # 用户Id
+        if price_policy_id == None: #测试
+            price_policy_id = '1'   #价格与课程表id
+        ######
+
+
         if not nid:
             info = {'code': 401, 'msg': '尚未登陆', 'content': ''}  # 状态信息
             return Response(info)
+
         try:
-            obj = models.PricePolicy.objects.get(pk=pid) #课程对象
-            if r.hget('price_user_%s'%nid,str(obj.pk)):
+            obj = models.PricePolicy.objects.get(pk=price_policy_id) #课程对象
+            if self.r.conn.hget('price_user_%s'%nid,str(obj.pk)):
                 info = {'code': 204, 'msg': '', 'content': '更新数据'}  # 状态信息
-            r.hset('price_user_%s'%nid,obj.pk,pid)  #增加数据格式：price_user_用户id；课程id；价格与课程表id
+            self.r.conn.hset('price_user_%s'%nid,obj.pk,price_policy_id)  #增加数据格式：price_user_用户id；课程id；价格与课程表id
         except:
             info = {'code': 400, 'msg': '添加出错', 'content': ''}
 
@@ -228,24 +234,36 @@ class Shopping(APIView):
     def delete(self,request,*args,**kwargs):
         """ 删除购物车信息 """
         info = {'code': 200, 'msg': '', 'content': '删除数据'}  # 状态信息
-        nid = '1' #用户id
-        pid = '3' #课程与课程表id
+        price_policy_id = request.data.get('price_policy_id') #策略id
+
+        ######
+        nid = '1'  # 用户Id
+        if price_policy_id == None: #测试
+            price_policy_id = '1'   #价格与课程表id
+        ######
+
         try:
-            obj = models.PricePolicy.objects.get(pk=pid)  # 课程对象
-            r.hdel('price_user_%s'%nid,obj.pk)  #删除数据
+            obj = models.PricePolicy.objects.get(pk=price_policy_id)  # 课程对象
+            self.r.conn.hdel('price_user_%s'%nid,obj.pk)  #删除数据
         except:
             info = {'code': 400, 'msg': '删除出错', 'content': ''}  # 状态信息
         return Response(info)
 
     def put(self,request,*args,**kwargs):
         """ 更新购物车信息 """
-        nid = '1'   #用户id
-        pid = '1'   #价格与课程表id
+        price_policy_id = request.data.get('price_policy_id') #策略id
+
+        ######
+        nid = '1'  # 用户Id
+        if price_policy_id == None: #测试
+            price_policy_id = '1'   #价格与课程表id
+        ######
+
         info = {'code': 200, 'msg': '', 'content': '更新数据'}  # 状态信息
         try:
-            obj = models.PricePolicy.objects.get(pk=pid)  # 课程对象
-            if r.hget('price_user_%s' % nid, str(obj.pk)):  #数据存在,则更新操作
-                r.hset('price_user_%s' % nid, obj.pk, pid)  # 增加数据格式：price_user_用户id；课程id；价格与课程表id
+            obj = models.PricePolicy.objects.get(pk=price_policy_id)  # 课程对象
+            if self.r.conn.hget('price_user_%s' % nid, str(obj.pk)):  #数据存在,则更新操作
+                self.r.conn.hset('price_user_%s' % nid, obj.pk, price_policy_id)  # 增加数据格式：price_user_用户id；课程id；价格与课程表id
             else:
                 info = {'code': 410, 'msg': '数据不存在', 'content': ''}
         except:
