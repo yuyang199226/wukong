@@ -263,8 +263,13 @@ class Shopping(APIView):
         self.r = SingleRedis()  #单利模式
     def get(self,request,*args,**kwargs):
         """ 获取购物车信息 """
+
+        nid = request.user
         ######
-        nid = '1'  # 用户Id 测试
+        if not nid:
+            nid = '1'  # 用户Id
+        else:
+            nid = request.user.id
         ######
 
         info = {'code': 200, 'msg': '', 'content': {'course':{}}} #返回的数据
@@ -290,8 +295,12 @@ class Shopping(APIView):
         info = {'code':200,'msg':'','content':''}   #状态信息
         price_policy_id = request.data.get('price_policy_id') #策略ID
 
+        nid = request.user
         ######
-        nid = '1'  # 用户Id
+        if not nid:
+            nid = '1'  # 用户Id
+        else:
+            nid = request.user.id
         if price_policy_id == None: #测试
             price_policy_id = '1'   #价格与课程表id
         ######
@@ -315,17 +324,18 @@ class Shopping(APIView):
         # price_policy_id = request.data.get('price_policy_id') #策略id
         course_id =  request.data.get('course_id') #课程id
 
+        nid = request.user
         ######
-        nid = '1'  # 用户Id
-        if course_id == None: #测试
-            course_id = '1'   #价格与课程表id
+        if not nid:
+            nid = '1'  # 用户Id
+        else:
+            nid = request.user.id
+        # if price_policy_id == None: #测试
+        #     price_policy_id = '1'   #价格与课程表id
         ######
-
-        print(request.data)
-        print(course_id)
 
         try:
-            # obj = models.PricePolicy.objects.get(pk=price_policy_id)  # 课程对象【根据策略id查询】
+            # obj = models.PricePolicy.objects.get(pk=price_policy_id).content_object  # 课程对象【根据策略id查询】
             # self.r.conn.hdel('price_user_%s'%nid,obj.pk)  #删除数据
             pass
             # self.r.conn.hdel('price_user_%s'%nid,course_id)  #删除数据  根据课程id
@@ -337,8 +347,12 @@ class Shopping(APIView):
         """ 更新购物车信息 """
         price_policy_id = request.data.get('price_policy_id') #策略id
 
+        nid = request.user
         ######
-        nid = '1'  # 用户Id
+        if not nid:
+            nid = '1'  # 用户Id
+        else:
+            nid = request.user.id
         if price_policy_id == None: #测试
             price_policy_id = '1'   #价格与课程表id
         ######
