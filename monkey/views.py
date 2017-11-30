@@ -44,7 +44,7 @@ class LoginView(APIView):
         return response
 
 
-#
+
 class MtoMField(serializers.CharField):
     def get_attribute(self, instance):
        return instance.objects.values('name','title')
@@ -270,7 +270,6 @@ class Shopping(APIView):
             nid = '1'  # 用户Id
         else:
             nid = request.user.id
-        ######
 
         info = {'code': 200, 'msg': '', 'content': {'course':{}}} #返回的数据
         if not nid:
@@ -288,8 +287,7 @@ class Shopping(APIView):
             for i in course_list:
                 i = str(i,encoding='utf-8')
                 course_obj = models.Course.objects.get(id=i)#课程对象
-                default = models.PricePolicy.objects.get(pk=str(self.r.conn.hget('price_user_%s' % nid, i), encoding='utf-8')).pk  # 默认价格
-                # default = str(self.r.conn.hget('price_user_%s' % nid, i), encoding='utf-8') #默认选择id
+                default = models.PricePolicy.objects.get(pk=str(self.r.conn.hget('price_user_%s' % nid, i), encoding='utf-8')).pk
                 dic = {}
                 for i in ShopPriceJson(instance=course_obj.price_policy,many=True).data:
                     dic[i['id']] = i
@@ -300,7 +298,7 @@ class Shopping(APIView):
 
     def post(self,request,*args,**kwargs):
         """ 增加购物车信息 """
-        info = {'code':200,'msg':'','content':''}   #状态信息
+        info = {'code':200,'msg':'','content':'添加成功'}   #状态信息
         price_policy_id = request.data.get('price_policy_id') #策略ID
 
         nid = request.user
@@ -329,24 +327,19 @@ class Shopping(APIView):
     def delete(self,request,*args,**kwargs):
         """ 删除购物车信息 """
         info = {'code': 200, 'msg': '', 'content': '删除课程成功'}  # 状态信息
-        # price_policy_id = request.data.get('price_policy_id') #策略id
-        course_id =  request.data.get('course_id') #课程id
-
+        course_id =  request.data.getlist('course_id') #课程id
         nid = request.user
+        
         ######
         if not nid:
             nid = '1'  # 用户Id
         else:
             nid = request.user.id
-        # if price_policy_id == None: #测试
-        #     price_policy_id = '1'   #价格与课程表id
         ######
 
         try:
-            # obj = models.PricePolicy.objects.get(pk=price_policy_id).content_object  # 课程对象【根据策略id查询】
-            # self.r.conn.hdel('price_user_%s'%nid,obj.pk)  #删除数据
             pass
-            # self.r.conn.hdel('price_user_%s'%nid,course_id)  #删除数据  根据课程id
+            # self.r.conn.hdel('price_user_%s'%nid,*course_id)  #删除数据  根据课程id
         except:
             info = {'code': 400, 'msg': '删除出错', 'content': ''}  # 状态信息
         return Response(info)
