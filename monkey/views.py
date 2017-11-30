@@ -288,10 +288,12 @@ class Shopping(APIView):
             for i in course_list:
                 i = str(i,encoding='utf-8')
                 course_obj = models.Course.objects.get(id=i)#课程对象
-                default = models.PricePolicy.objects.get(pk=str(self.r.conn.hget('price_user_%s' % nid, i), encoding='utf-8')).price  # 默认价格
+                default = models.PricePolicy.objects.get(pk=str(self.r.conn.hget('price_user_%s' % nid, i), encoding='utf-8')).pk  # 默认价格
                 # default = str(self.r.conn.hget('price_user_%s' % nid, i), encoding='utf-8') #默认选择id
-
-                info['content']['course']['%s'%course_obj.pk] = {'name':course_obj.name,'default':default,'policy':ShopPriceJson(instance=course_obj.price_policy,many=True).data}
+                dic = {}
+                for i in ShopPriceJson(instance=course_obj.price_policy,many=True).data:
+                    dic[i['id']] = i
+                info['content']['course']['%s'%course_obj.pk] = {'name':course_obj.name,'default':default,'policy':dic}
         except:
             info = {'code': 400, 'msg': '获取数据错误', 'content': {'course': {}}}  # 返回的数据
         return Response(info)
