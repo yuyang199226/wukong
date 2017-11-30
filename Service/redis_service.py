@@ -1,7 +1,7 @@
 #! user/bin/env python
 # -*- coding: utf-8 -*-
 import redis
-
+from django.conf import settings
 
 class Singleton(object):
     def __new__(cls, *args, **kwargs):
@@ -12,11 +12,9 @@ class Singleton(object):
 
 
 class SingleRedis(Singleton):
-    def __init__(self, host='192.168.16.43', port=6379, password=None):
-        pool = redis.ConnectionPool(host=host, port=port, password=None)
+    def __init__(self,):
+        pool = redis.ConnectionPool(**settings.REDIS_PARAMETER)
         self.conn = redis.Redis(connection_pool=pool)
-
-
 """
 a = SingleRedis()
 print(a)  # <__main__.SingleRedis object at 0x0000017D31F8CCF8>

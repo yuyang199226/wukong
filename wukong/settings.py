@@ -140,3 +140,13 @@ REST_FRAMEWORK = {
     ]
 
 }
+
+
+
+########## REDIS 配置  ##################
+REDIS_PARAMETER = {
+    'host':'67.209.178.158',
+    'port':6379,
+    'password':None
+}
+

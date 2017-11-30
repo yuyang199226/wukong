@@ -263,8 +263,8 @@ class Shopping(APIView):
         self.r = SingleRedis()  #单利模式
     def get(self,request,*args,**kwargs):
         """ 获取购物车信息 """
-
         nid = request.user
+
         ######
         if not nid:
             nid = '1'  # 用户Id
@@ -276,9 +276,15 @@ class Shopping(APIView):
         if not nid:
             info = {'code': 401, 'msg': '尚未登陆', 'content': ''}  # 状态信息
             return Response(info)
-        course_list = self.r.conn.hkeys('price_user_%s'%nid)   #所有的课程对象
 
         try:
+            course_list = self.r.conn.hkeys('price_user_%s' % nid)  # 所有的课程对象
+        except:
+            info = {'code': 404, 'msg': 'Redis连接失败', 'content': ''}  # 状态信息
+            return Response(info)
+
+        try:
+            # course_list = self.r.conn.hkeys('price_user_%s'%nid)   #所有的课程对象
             for i in course_list:
                 i = str(i,encoding='utf-8')
                 course_obj = models.Course.objects.get(id=i)#课程对象
