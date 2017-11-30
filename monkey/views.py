@@ -43,8 +43,6 @@ class LoginView(APIView):
         response = HttpResponse('ok')
         return response
 
-
-
 class MtoMField(serializers.CharField):
     def get_attribute(self, instance):
        return instance.objects.values('name','title')
@@ -63,7 +61,6 @@ class MyField(serializers.CharField):
         for row in value:
             ret.append({'id': row.id, 'name': row.name})
         return ret
-
 
 class CourseSerializer(serializers.Serializer):
     '''课程'''
